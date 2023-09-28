@@ -48,8 +48,7 @@ satelite = cimgt.GoogleTiles(url='https://server.arcgisonline.com/ArcGIS/rest/se
 stamen = cimgt.Stamen(style='terrain-background')
 
 # ponto central
-latitude, longitude = -30.066356130832947, -51.16407841641491
-
+latitude, longitude = -27.60139038520105, -48.52022302277921
 
 # começa o plot
 fig = plt.figure(figsize=(16, 12))
@@ -74,4 +73,4 @@ ax3.add_image(stamen,4)
 
 # Ajuste das margens
 plt.subplots_adjust(left=0.05, right=0.95, top=0.95, bottom=0.05)
-plt.show()
+plt.savefig('mapa.png',bbox_inches='tight', pad_inches=0.5)
